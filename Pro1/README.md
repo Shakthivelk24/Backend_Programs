@@ -14,22 +14,24 @@ npm install express
 <hr />
 
 # File Structure
-PRO1<br/>
-│<br/>    
-├── node_modules<br/>
-│<br/>
-├── public<br/>
-│   ├── css<br/>
-│   │   └── style.css<br/>
-│   ├── image<br/>
-│   │   └── Vijay.jpg<br/>
-│   └── js<br/>
-│       └── script.js<br/>
-│<br/>
-├── index.html<br/>
-├── app.js<br/>
-├── package-lock.json<br/>
-└── package.json<br/>
+```
+PRO1
+│
+├── node_modules
+│
+├── public
+│   ├── css
+│   │   └── style.css
+│   ├── image
+│   │   └── Vijay.jpg
+│   └── js
+│       └── script.js
+│
+├── index.html
+├── app.js
+├── package-lock.json
+└── package.json
+```
 <hr />
 
 # Start the Server(Run in VS Code Terminal)
