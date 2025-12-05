@@ -15,7 +15,7 @@ Change the MongoDB
 mongodb+srv://<username>:<password>@cluster0.xxxxxx.mongodb.net/
 ```
 
-### To Change the Server 
+### To Start the Server 
 ```
 npx nodemon app.mjs
 ```
