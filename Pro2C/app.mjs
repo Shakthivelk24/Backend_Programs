@@ -1,7 +1,6 @@
-import express from 'express';
-import connectDB from './db.mjs';
-import itemRouter from './itemRouter.mjs';
-
+import express from "express";
+import connectDB from "./db.mjs";
+import itemRouter from "./itemRouter.mjs";
 
 const app = express();
 app.use(express.json());
@@ -9,9 +8,9 @@ app.use(express.json());
 // Connect to MongoDB
 connectDB();
 
-// Use item router for routes starting with /items 
+// Use item router for routes starting with /items
 // change the path as needed
-app.use('/items', itemRouter);
+app.use("/items", itemRouter);
 
 //  Start server
 app.listen(3000, () => {
