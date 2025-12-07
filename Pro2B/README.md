@@ -1,4 +1,4 @@
-# Program 02A
+# Program 02B
 This project is a simple REST API built using Node.js, Express, and Mongoose. It demonstrates CRUD operations
 The API interacts with a MongoDB database to manage student records in a collection.
 <hr />
