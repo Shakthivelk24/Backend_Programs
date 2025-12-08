@@ -14,6 +14,8 @@ app.use(express.json());
 connectDB();
 
 // Routes
-app.use('/api/users', userRoutes);
+app.use("/api/users", userRoutes);
 
-app.listen(4000, () => console.log(`Server running at http://localhost:${4000}`));
+app.listen(4000, () =>
+  console.log(`Server running at http://localhost:${4000}`)
+);
