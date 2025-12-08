@@ -7,16 +7,17 @@ const router = express.Router();
 
 // Register
 router.post("/register", async (req, res) => {
-  const { username, email, password } = req.body; // Destructure the incoming data from req.body 
+  const { username, email, password } = req.body; // Destructure the incoming data from req.body
 
   try {
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password, salt);
 
-    const newUser = new userModel({   //Change here according to model as per newUserModel.mjs
+    const newUser = new userModel({
+      //Change here according to model as per newUserModel.mjs
       username,
       email,
-      password: hashPassword
+      password: hashPassword,
     });
 
     await newUser.save();
@@ -46,12 +47,11 @@ router.post("/login", async (req, res) => {
 
     const token = jwt.sign(
       { id: user._id, role: user.role },
-      "shakthivelk",    //where your own secret key should be placed
+      "shakthivelk", //where your own secret key should be placed
       { expiresIn: "20m" }
     );
 
     res.json({ token });
-
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
