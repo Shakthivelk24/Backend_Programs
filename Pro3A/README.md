@@ -62,7 +62,8 @@ Body
   "password":"TNCM"
 }
 ```
-### Token will be generated
+#### Response:
+A JWT Token will be generated.
 
 <HR/>
 
