@@ -78,7 +78,7 @@ A JWT Token will be generated.
 
 ## 🔹 Verify JWT Token (Protected Route)
 ### GET | http://localhost:3000/api/users/
-Auth
+Auth <br/>
 Bearer
 ```
 Generated Token
