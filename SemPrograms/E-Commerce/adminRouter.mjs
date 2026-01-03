@@ -1,3 +1,4 @@
+// Admin router handling registration, login, and item management with role-based access control
 import express from "express";
 import itemModel from "./items.mjs";
 import bcrypt from "bcrypt";
@@ -5,7 +6,7 @@ import jwt from "jsonwebtoken";
 import authorize from "./newAuth.mjs";
 
 const router = express.Router();
-
+// Register and Login routes is same for all type of the Questions asked in the Semester
 // Register
 router.post("/register", async (req, res) => {
   const { userName, password, role } = req.body;
@@ -57,15 +58,18 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
+// End of Register and Login routes
+
+//  ADD new item by admin only
 
 router.post(
   "/",
   authorize(["admin"]),  // Protect this route for 'admin' role only
   async (req, res) => {
-    const {name,category,price,StockQuantity,description} = req.body;
+    const {name,category,price,StockQuantity,description} = req.body;// destructuring the req body according to the schema
     try {
-    const newItem = new itemModel({
-      name,
+    const newItem = new itemModel({ 
+      name,                                // change the fields as per requirement given in the question
       category,
       price,
       StockQuantity,
@@ -80,6 +84,8 @@ router.post(
   }
 );
 
+
+//  UPDATE item by admin only
 router.put("/:id",authorize(["admin"]), async (req, res) => {
   try {
     const item = await itemModel.findByIdAndUpdate(req.params.id, req.body, {
@@ -93,7 +99,7 @@ router.put("/:id",authorize(["admin"]), async (req, res) => {
   }
 });
 
-//  DELETE item
+//  DELETE item by admin only
 router.delete("/:id", authorize(["admin"]), async (req, res) => {
   try {
     const item = await itemModel.findByIdAndDelete(req.params.id);
