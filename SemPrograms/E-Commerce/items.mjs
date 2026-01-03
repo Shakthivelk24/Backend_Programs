@@ -1,3 +1,4 @@
+// change the schema as per requirement given in the question
 import mongoose from "mongoose";
 
 const itemSchema = new mongoose.Schema({
@@ -16,6 +17,8 @@ const itemSchema = new mongoose.Schema({
   description: {
     type: String,
   },
+  // add this fields for any question given in the semester
+  // and this will be same for all type of the questions
   userName: {
     type: String,
   },
@@ -26,6 +29,7 @@ const itemSchema = new mongoose.Schema({
     type: String,
     enum: ["admin", "user"],
   },
+  // end of additional fields
 });
 const Item = mongoose.model("Item", itemSchema);
 
