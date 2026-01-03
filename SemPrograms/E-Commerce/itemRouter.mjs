@@ -1,3 +1,5 @@
+// this file handles routes 
+// to only the get all items and get single item by ID
 import express from "express";
 import itemModel from "./items.mjs";
 
