@@ -1,3 +1,4 @@
+// Same for all type of the Questions asked in the Semester
 import jwt from "jsonwebtoken";
 
 const newAuth = (roles) => {
