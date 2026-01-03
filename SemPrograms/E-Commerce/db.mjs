@@ -1,3 +1,4 @@
+// Database connection file
 import mongoose from "mongoose";
 const connetDB = async () => {
   try {
