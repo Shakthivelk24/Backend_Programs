@@ -1,7 +1,7 @@
 // this file handles routes 
 // to only the get all items and get single item by ID
 import express from "express";
-import medicalModel from "./medicalModel.mjs";
+import medicalModel from "./medical.mjs";
 
 const router = express.Router();
 
