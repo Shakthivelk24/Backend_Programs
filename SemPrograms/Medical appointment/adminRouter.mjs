@@ -1,6 +1,6 @@
 // Admin router handling registration, login, and item management with role-based access control
 import express from "express";
-import medicalModel from "./medicalModel.mjs";
+import medicalModel from "./medical.mjs";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import authorize from "./newAuth.mjs";
